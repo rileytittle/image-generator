@@ -1,0 +1,40 @@
+{
+  "model_id": "stabilityai/stable-diffusion-xl-base-1.0",
+  "model_variant": "fp16",
+  "cache_dir": null,
+  "allow_download": false,
+
+  "device": "auto",
+  "allow_cpu_fallback": false,
+  "dtype": "auto",
+  "attention_slicing": "auto",
+  "long_prompts": true,
+
+  "preset": "test",
+  "presets": {
+    "test": { "width": 512, "height": 768, "steps": 25, "guidance_scale": 6.5 },
+    "quality": { "width": 832, "height": 1248, "steps": 35, "guidance_scale": 6.5 }
+  },
+  "default_seed": 12345,
+
+  "style_file": "config/style.txt",
+  "prompt_template": "{character}\n\n{style}",
+  "negative_prompt": "photorealistic, photograph, realistic skin texture, 3d render, hyperrealistic, text, letters, words, caption, watermark, signature, logo, card frame, border, banner, ui, cropped, cut off, out of frame, multiple characters, blurry, low quality, jpeg artifacts, deformed, extra limbs, extra fingers",
+
+  "output_dir": "output",
+  "image_format": "png",
+  "existing_outputs": "skip",
+  "retry_failed": false,
+  "max_consecutive_failures": 3,
+
+  "safe_zones": { "top": 0.12, "bottom": 0.15 },
+
+  "postprocess": {
+    "enabled": false,
+    "width": 1024,
+    "height": 1536,
+    "fit": "crop",
+    "pad_color": "#3b2a1a",
+    "output_subdir": "final"
+  }
+}

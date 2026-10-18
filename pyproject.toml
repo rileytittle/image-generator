@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cardgen"
+version = "0.1.0"
+description = "Local batch text-to-image generation for medieval trading-card character art"
+readme = "README.md"
+requires-python = ">=3.10"
+# The core (validate, dry-run, status, qc, postprocess) needs only Pillow.
+dependencies = ["Pillow>=10.0"]
+
+[project.optional-dependencies]
+# Local image generation. Install with: pip install -e ".[gen]"
+gen = [
+    "torch>=2.3",
+    "diffusers>=0.30",
+    "transformers>=4.44",
+    "accelerate>=0.33",
+    "safetensors>=0.4",
+    "huggingface_hub>=0.34",
+]
+dev = ["pytest>=8"]
+
+[project.scripts]
+cardgen = "cardgen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "smoke: real image generation with a downloaded model (opt-in: CARDGEN_SMOKE=1)",
+]

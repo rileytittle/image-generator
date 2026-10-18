@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+.DS_Store
+
+# Generated output (keep the folder itself)
+output/*
+!output/.gitkeep
+
+# Local model caches, if you point cache_dir inside the project
+models/
+*.tmp

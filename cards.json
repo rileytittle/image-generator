@@ -1,0 +1,20 @@
+[
+  {
+    "id": "village_archer",
+    "name": "Village Archer",
+    "prompt": "A young archer in a green hood squinting while drawing a bow. Arrows are stuck in everything around the target except the bullseye. A village archery range by the woods.",
+    "seed": 1001
+  },
+  {
+    "id": "brave_peasant",
+    "name": "Brave Peasant",
+    "prompt": "A scrappy, determined peasant in patched brown clothes, gripping a pitchfork like a weapon, with straw in his hair and a fierce scowl. Muddy farm village with haystacks and chickens.",
+    "seed": 1002
+  },
+  {
+    "id": "court_jester",
+    "name": "Court Jester",
+    "prompt": "A grinning jester in a red-and-green diamond-pattern outfit and a three-pointed hat with bells, juggling three colorful balls. Inside a royal throne room with banners.",
+    "seed": 1003
+  }
+]
