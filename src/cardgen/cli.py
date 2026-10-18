@@ -445,7 +445,8 @@ def _setup_logging(verbose: bool) -> None:
         if getattr(handler, "_cardgen_console", False):
             handler.setLevel(logging.DEBUG if verbose else logging.INFO)
     # Third-party libraries are noisy at INFO/DEBUG.
-    for name in ("urllib3", "filelock", "PIL", "diffusers", "transformers", "huggingface_hub"):
+    for name in ("urllib3", "httpx", "httpcore", "hf_xet", "filelock", "PIL", "torch",
+                 "diffusers", "transformers", "huggingface_hub"):
         logging.getLogger(name).setLevel(logging.WARNING)
 
 

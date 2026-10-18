@@ -188,7 +188,7 @@ class DiffusersGenerator:
         if self.settings.cache_dir:
             kwargs["cache_dir"] = str(self.settings.cache_dir)
 
-        log.info("Loading model %s%s ...", self.settings.model_id,
+        log.debug("Loading model %s%s ...", self.settings.model_id,
                  "" if self.settings.allow_download else " from the local cache")
         started = time.monotonic()
         try:
