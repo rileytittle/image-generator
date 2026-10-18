@@ -30,7 +30,7 @@ def test_valid_cards_load(project):
 def test_example_cards_file_is_valid():
     from pathlib import Path
     cards = load_cards(Path(__file__).resolve().parents[1] / "cards.json").cards
-    assert len(cards) == 3
+    assert cards  # the real card list; validate_cards already enforced every rule
 
 
 def test_name_defaults_to_id_and_prompt_whitespace_is_normalised():
@@ -156,3 +156,10 @@ def test_csv_needs_header(tmp_path):
     path.write_text("archer,An archer\n")
     with pytest.raises(CardValidationError):
         load_cards(path)
+
+
+def test_rarity_is_optional_and_validated():
+    card = validate_cards([{"id": "a", "prompt": "x", "rarity": " Epic "}]).cards[0]
+    assert card.rarity == "Epic"
+    assert validate_cards([{"id": "a", "prompt": "x"}]).cards[0].rarity is None
+    assert any("rarity" in e for e in errors_of([{"id": "a", "prompt": "x", "rarity": 3}]))

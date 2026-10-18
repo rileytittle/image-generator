@@ -22,7 +22,7 @@ from .config import (
 
 # IDs become filenames, so keep them to a portable, case-insensitively unique set.
 ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9_-]{0,63}$")
-CARD_KEYS = {"id", "name", "prompt", "seed", "overrides"}
+CARD_KEYS = {"id", "name", "prompt", "seed", "rarity", "overrides"}
 OVERRIDE_KEYS = set(GENERATION_KEYS) | {"negative_prompt"}
 MAX_PROMPT_CHARS = 2000
 
@@ -41,6 +41,7 @@ class Card:
     name: str
     prompt: str
     seed: int | None = None
+    rarity: str | None = None  # informational only; recorded in the manifest
     overrides: Mapping[str, Any] = field(default_factory=dict)
 
 
@@ -122,6 +123,10 @@ def _validate_card(raw: Any, where: str) -> tuple[Card | None, list[str], list[s
     if seed is not None:
         errors += validate_seed(seed, label)
 
+    rarity = raw.get("rarity")
+    if rarity is not None and (not isinstance(rarity, str) or not rarity.strip() or len(rarity) > 32):
+        errors.append(f"{label}: 'rarity' must be a short non-empty string when present")
+
     overrides = raw.get("overrides") or {}
     if not isinstance(overrides, dict):
         errors.append(f"{label}: 'overrides' must be an object")
@@ -144,7 +149,8 @@ def _validate_card(raw: Any, where: str) -> tuple[Card | None, list[str], list[s
     if errors:
         return None, errors, warnings
     return Card(id=card_id, name=name.strip(), prompt=" ".join(prompt.split()),
-                seed=seed, overrides=dict(overrides)), [], warnings
+                seed=seed, rarity=rarity.strip() if rarity else None,
+                overrides=dict(overrides)), [], warnings
 
 
 def validate_cards(raw_cards: Any, source: str = "cards") -> CardSet:

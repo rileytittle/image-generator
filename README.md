@@ -225,6 +225,7 @@ python -m cardgen <command> --help
 | `id` | yes | 1–64 characters: lowercase letters, digits, `_`, `-`. Used as the filename (`<id>.png`). Must be unique. |
 | `name` | no | Display name (defaults to `id`). Not drawn on the image. |
 | `prompt` | yes | The character and scene description. |
+| `rarity` | no | Free text such as `Common` or `Legendary`. For your own organisation only; it does not change the image. Recorded in the manifest. |
 | `seed` | no | Integer 0 – 4294967295. Without it, a seed is derived from the global `default_seed` and the card's `id`. |
 | `overrides` | no | Per-card `width`, `height`, `steps`, `guidance_scale`, `negative_prompt`. |
 

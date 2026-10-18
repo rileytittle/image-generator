@@ -238,6 +238,7 @@ def _run_job(job: CardJob, settings: Settings, manifest: Manifest, generator: Im
     manifest.update(
         card.id,
         name=card.name,
+        rarity=card.rarity,
         prompt=card.prompt,
         full_prompt=req.prompt,
         negative_prompt=req.negative_prompt,

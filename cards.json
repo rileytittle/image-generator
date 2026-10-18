@@ -1,20 +1,173 @@
 [
   {
-    "id": "village_archer",
-    "name": "Village Archer",
-    "prompt": "A young archer in a green hood squinting while drawing a bow. Arrows are stuck in everything around the target except the bullseye. A village archery range by the woods.",
-    "seed": 1001
-  },
-  {
-    "id": "brave_peasant",
-    "name": "Brave Peasant",
-    "prompt": "A scrappy, determined peasant in patched brown clothes, gripping a pitchfork like a weapon, with straw in his hair and a fierce scowl. Muddy farm village with haystacks and chickens.",
-    "seed": 1002
+    "id": "squire_pip",
+    "name": "Squire Pip",
+    "rarity": "Common",
+    "prompt": "A nervous young squire in a helmet far too big for his head, visor up, holding a sword taller than himself that drags on the ground. Red and yellow tunic. A sunny meadow with a small castle in the distance.",
+    "seed": 1004
   },
   {
     "id": "court_jester",
     "name": "Court Jester",
+    "rarity": "Common",
     "prompt": "A grinning jester in a red-and-green diamond-pattern outfit and a three-pointed hat with bells, juggling three colorful balls. Inside a royal throne room with banners.",
     "seed": 1003
+  },
+  {
+    "id": "brave_peasant",
+    "name": "Brave Peasant",
+    "rarity": "Common",
+    "prompt": "A scrappy, determined peasant in patched brown clothes, gripping a pitchfork like a weapon, with straw in his hair and a fierce scowl. Muddy farm village with haystacks and chickens.",
+    "seed": 1002
+  },
+  {
+    "id": "village_archer",
+    "name": "Village Archer",
+    "rarity": "Common",
+    "prompt": "A young archer in a green hood squinting while drawing a bow. Arrows are stuck in everything around the target except the bullseye. A village archery range by the woods.",
+    "seed": 1001
+  },
+  {
+    "id": "stable_hand",
+    "name": "Stable Hand",
+    "rarity": "Common",
+    "prompt": "A cheerful stable hand with messy hair and a pitchfork, a horse nuzzling his head from behind, flies buzzing around. Inside a wooden stable with hay bales.",
+    "seed": 1005
+  },
+  {
+    "id": "royal_herald",
+    "name": "Royal Herald",
+    "rarity": "Common",
+    "prompt": "A puffed-up royal herald in a fancy tabard, blowing a long golden trumpet with a hanging banner, cheeks bulging. Castle courtyard with a crowd of covered ears in the background.",
+    "seed": 1006
+  },
+  {
+    "id": "scribbling_monk",
+    "name": "Scribbling Monk",
+    "rarity": "Common",
+    "prompt": "A bald monk in a brown robe hunched over a giant book, quill in hand, ink splattered on his face, a confused look. A candlelit monastery library with towering shelves.",
+    "seed": 1007
+  },
+  {
+    "id": "sir_turnip",
+    "name": "Sir Turnip",
+    "rarity": "Common",
+    "prompt": "A small knight in mismatched, dented armor proudly holding up a turnip like a sword, with a turnip as the crest on his helmet. A vegetable garden with a scarecrow.",
+    "seed": 1008
+  },
+  {
+    "id": "shield_maiden",
+    "name": "Shield Maiden",
+    "rarity": "Uncommon",
+    "prompt": "A confident warrior woman with long orange braids, a round steel helmet with a nose guard, and a smirk. She holds a round wooden shield painted blue and an axe over her shoulder. Misty pine forest.",
+    "seed": 1009
+  },
+  {
+    "id": "wandering_bard",
+    "name": "Wandering Bard",
+    "rarity": "Uncommon",
+    "prompt": "A dramatic bard with a feathered cap and a lute, mid-song with eyes closed and one arm raised, musical notes floating around. A cozy tavern with annoyed patrons in the background.",
+    "seed": 1010
+  },
+  {
+    "id": "brother_barrel",
+    "name": "Brother Barrel",
+    "rarity": "Uncommon",
+    "prompt": "A round, jolly friar in a brown robe holding a huge mug of ale and a chicken leg, making a blessing gesture. A feast table with candles and bread.",
+    "seed": 1011
+  },
+  {
+    "id": "rookie_jouster",
+    "name": "Rookie Jouster",
+    "rarity": "Uncommon",
+    "prompt": "A clumsy young knight wobbling on a horse, his lance pointing the wrong way, the horse looking embarrassed. A jousting arena with striped tents and flags.",
+    "seed": 1012
+  },
+  {
+    "id": "swamp_witch",
+    "name": "Swamp Witch",
+    "rarity": "Uncommon",
+    "prompt": "A mischievous witch with a wide crooked hat and green-tinted skin, stirring a bubbling cauldron of glowing green potion, a frog on her hat. Foggy swamp with twisted trees.",
+    "seed": 1013
+  },
+  {
+    "id": "trebuchet_crew",
+    "name": "Trebuchet Crew",
+    "rarity": "Uncommon",
+    "prompt": "Two tiny soldiers loading a giant boulder into a wooden trebuchet, straining and sweating, one about to be flung along with it. Hilltop overlooking an enemy castle.",
+    "seed": 1014
+  },
+  {
+    "id": "black_knight",
+    "name": "The Black Knight",
+    "rarity": "Rare",
+    "prompt": "A tall knight in sleek black armor with glowing red eye slits and a tattered black cape, holding a big sword in a heroic stance. An empty, windswept battlefield.",
+    "seed": 1015,
+    "overrides": {
+      "negative_prompt": "photorealistic, photograph, realistic skin texture, 3d render, hyperrealistic, text, letters, words, caption, watermark, signature, logo, card frame, border, banner, ui, cropped, cut off, out of frame, multiple characters, blurry, low quality, jpeg artifacts, deformed, extra limbs, extra fingers, opponents, enemies, soldiers, other people, crowd"
+    }
+  },
+  {
+    "id": "court_wizard",
+    "name": "Court Wizard",
+    "rarity": "Rare",
+    "prompt": "An old wizard with a huge white beard and bushy eyebrows, happy closed eyes, a floppy blue hat covered in yellow stars, holding a staff with a glowing cyan orb. Starry purple night sky with a crescent moon.",
+    "seed": 1016
+  },
+  {
+    "id": "wolf_rider",
+    "name": "Wolf Rider",
+    "rarity": "Rare",
+    "prompt": "A warrior in fur armor riding a huge snarling grey wolf, which is clearly doing all the work while the rider holds on. Snowy mountain pass.",
+    "seed": 1017
+  },
+  {
+    "id": "castle_guardian",
+    "name": "Castle Guardian",
+    "rarity": "Rare",
+    "prompt": "An old, stubborn castle guard with a long grey mustache in rusty armor, standing at a castle gate with a halberd, cobwebs on his shoulder. Massive stone gate with a portcullis.",
+    "seed": 1018
+  },
+  {
+    "id": "holy_paladin",
+    "name": "Holy Paladin",
+    "rarity": "Rare",
+    "prompt": "A noble paladin in shining white-and-gold armor with a softly glowing halo of light around him, holding a hammer and a shield with a sun emblem. Golden light rays in a cathedral.",
+    "seed": 1019
+  },
+  {
+    "id": "dragonslayer",
+    "name": "Dragonslayer",
+    "rarity": "Epic",
+    "prompt": "A battle-scarred hero in heavy armor standing triumphantly, holding a huge sword, a dragon's horn slung over his back as a trophy, a little singed and smoking. Scorched rocky landscape with embers.",
+    "seed": 1020
+  },
+  {
+    "id": "warrior_queen",
+    "name": "Warrior Queen",
+    "rarity": "Epic",
+    "prompt": "A fierce queen in ornate silver armor and a golden crown, red cape flowing, holding a sword raised high. A grand castle balcony with her army's banners below.",
+    "seed": 1021
+  },
+  {
+    "id": "armored_giant",
+    "name": "Armored Giant",
+    "rarity": "Epic",
+    "prompt": "An enormous gentle giant in patchwork plate armor, crouching so he fits in the frame, holding a regular-sized horse like a puppy. Rolling hills with tiny castles for scale.",
+    "seed": 1022
+  },
+  {
+    "id": "elder_dragon",
+    "name": "Elder Dragon",
+    "rarity": "Legendary",
+    "prompt": "A huge red dragon with ivory horns, glowing yellow eyes and smoke puffing from its nostrils, its wings spread wide. It lies on a giant pile of gold coins, gems and a crown. Fiery orange-and-purple sunset with dark mountains.",
+    "seed": 1023
+  },
+  {
+    "id": "golden_knight",
+    "name": "The Golden Knight",
+    "rarity": "Legendary",
+    "prompt": "A legendary knight in radiant golden armor that glows brilliantly, a white plume on his helmet, a gleaming sword held high. Enemies in the distance are shielding their eyes and running away. Epic sky with clouds and light rays.",
+    "seed": 1024
   }
 ]
